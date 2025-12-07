@@ -156,9 +156,9 @@ button:hover {
 <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 
 <script>
-/* -----------------------------------------------------
-   ⭐ SPARKLING PARTICLES BACKGROUND
------------------------------------------------------ */
+// -----------------------------------------------------
+// ⭐ SPARKLING PARTICLES BACKGROUND
+// -----------------------------------------------------
 const pCanvas = document.getElementById("particles");
 const pCtx = pCanvas.getContext("2d");
 pCanvas.width = innerWidth;
@@ -194,9 +194,9 @@ function animateParticles() {
 }
 animateParticles();
 
-/* -----------------------------------------------------
-   🎆 FLASHY FIREWORKS 
------------------------------------------------------ */
+// -----------------------------------------------------
+// 🎆 FLASHY FIREWORKS 
+// -----------------------------------------------------
 const fCanvas = document.getElementById("fireworks");
 const fCtx = fCanvas.getContext("2d");
 fCanvas.width = innerWidth;
@@ -272,9 +272,9 @@ function startFireworks() {
 animateFireworks();
 startFireworks();
 
-/* -----------------------------------------------------
-   🎉 CONFETTI
------------------------------------------------------ */
+// -----------------------------------------------------
+// 🎉 CONFETTI
+// -----------------------------------------------------
 let confettiActive = false;
 let confettiInterval;
 
@@ -294,24 +294,19 @@ function toggleConfetti() {
   }
 }
 
-<script>
-// Mobile autoplay fix
+// -----------------------------------------------------
+// 🎵 MOBILE AUTOPLAY FIX (NO SCRIPT ERROR NOW)
+// -----------------------------------------------------
 document.addEventListener("click", function () {
   const audio = document.getElementById("bg-music");
   if (audio.paused) {
-    audio.volume = 0.35; // softer aesthetic volume
+    audio.volume = 0.35; 
     audio.play();
   }
 }, { once: true });
 
-// Desktop auto-volume
 window.addEventListener("load", () => {
   const audio = document.getElementById("bg-music");
   audio.volume = 0.35;
 });
 </script>
-
-</body>
-</html>
-
-
