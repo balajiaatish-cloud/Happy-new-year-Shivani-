@@ -118,9 +118,23 @@ button:hover {
 </head>
 
 <body>
-<audio id="bg-music" autoplay loop>
+<audio id="bg-music" loop>
   <source src="goldensparrow.mp3" type="audio/mp3">
 </audio>
+
+<script>
+window.addEventListener("load", () => {
+    const audio = document.getElementById("bg-music");
+    audio.volume = 0.5;
+    audio.play().catch(() => {
+        // Autoplay blocked → wait for user tap
+        document.body.addEventListener("click", () => {
+            audio.play();
+        }, { once: true });
+    });
+});
+</script>
+
 
 
 
@@ -312,6 +326,7 @@ window.addEventListener("load", () => {
   audio.volume = 0.35;
 });
 </script>
+
 
 
 
